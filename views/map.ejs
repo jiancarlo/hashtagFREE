@@ -1,0 +1,70 @@
+<html>
+<head>
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+	<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.js'></script>
+	<link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.css' rel='stylesheet' />
+	<style>
+		body {emargin:0; padding:0; }
+		#map { position:absolute; top:0; bottom:0; width:100%; }
+            .layer1 {position:relative; z-index: 2;}
+            .arrow_box {
+	position: relative;
+	background: #FFF;
+}
+.arrow_box:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #FFF;
+	border-width: 30px;
+	margin-left: -30px;
+}
+	</style>
+</head>
+
+<body>
+  <div id="map"></div>
+  <script>
+    mapboxgl.accessToken = 'pk.eyJ1Ijoiam9zaHVhamhhcnJpcyIsImEiOiJjaWs4aXY4OTUwMnM4dTNrdzc0NDI3Mm1yIn0.2qKe8jSYKFlGRiApo2ZiVw';
+    var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/mapbox/light-v8', //stylesheet location
+        center: [-76.3065812, 36.8860153], // starting position
+        zoom: 18, // starting zoom
+        pitch: 75
+    });
+  </script>
+<div class="container">
+<div class="row">
+  <div class="card col-md-4 arrow_box">
+    <img class="card-img-top" src="pizza.png" style="width: 100%;" alt="Card image cap">
+    <div class="card-block">
+      <h4 class="card-title">Card title</h4>
+      <p class="card-text" id="location">Location</p>
+      <a href="#" class="btn btn-primary">Button</a>
+
+    </div>
+
+
+    </div>
+
+    <div class="card col-md-1 arrow_box">
+      <img class="card-img-top" src="pizza.png" style="width: 50px;" alt="Card image cap">
+      <div class="card-block">
+
+      </div>
+
+
+      </div>
+
+    </div>
+  </div>
+
+ </body>
+ </html>
