@@ -7,7 +7,24 @@
 		body {emargin:0; padding:0; }
 		#map { position:absolute; top:0; bottom:0; width:100%; }
             .layer1 {position:relative; z-index: 2;}
-
+            .arrow_box {
+	position: relative;
+	background: #FFF;
+}
+.arrow_box:after {
+	top: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
+	border-color: rgba(255, 255, 255, 0);
+	border-top-color: #FFF;
+	border-width: 30px;
+	margin-left: -30px;
+}
 	</style>
 </head>
 
@@ -25,14 +42,27 @@
   </script>
 <div class="container">
 <div class="row">
-  <div class="card col-md-4">
+  <div class="card col-md-4 arrow_box">
     <img class="card-img-top" src="pizza.png" style="width: 100%;" alt="Card image cap">
     <div class="card-block">
       <h4 class="card-title">Card title</h4>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <p class="card-text" id="location">Location</p>
       <a href="#" class="btn btn-primary">Button</a>
+
     </div>
+
+
     </div>
+
+    <div class="card col-md-1 arrow_box">
+      <img class="card-img-top" src="pizza.png" style="width: 50px;" alt="Card image cap">
+      <div class="card-block">
+
+      </div>
+
+
+      </div>
+
     </div>
   </div>
 
